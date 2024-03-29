@@ -17,6 +17,7 @@ class TokoPakaian:
     }
     harga = pakaian.get(produk.lower(), 0)
     return harga * jumlah
+    
   def tampilkanproduk(self):
     print("Daftar Produk:")
     pakaian = {
@@ -64,3 +65,27 @@ class TokoPakaian:
       if jumlah >= 4:
         potongan = 0.2 * harga * jumlah
     return potongan
+
+def hitungkembalian(self):
+  self.kembalian = self.bayar - self.totalBayar
+  print('Uang Kembalian :', self.kembalian)
+
+def totalPembayaran(self):
+  while True:
+    while True:
+      beli = input('Masukan Produk / ketik (selesai) atau (produk) untuk tampilkan produk :')
+      if beli.lower() == 'selesai':
+        break
+      elif beli.lower() == 'produk':
+        continue
+      elif beli.lower() not in ['kaos', 'celana', 'jaket', 'kemeja', 'hoodie', 'blazer', 'gamis' 'dress']:
+        print("Produk tidak tersedia!")
+        continue
+      try:
+          banyak = int(input('Jumlah :'))
+      except ValueError :
+        print ("Masukan jumlah dengan benar!")
+        continue
+        
+      
+
