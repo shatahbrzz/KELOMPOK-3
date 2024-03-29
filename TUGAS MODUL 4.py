@@ -65,6 +65,7 @@ class TokoPakaian:
       if jumlah >= 4:
         potongan = 0.2 * harga * jumlah
     return potongan
+    
 
 def hitungkembalian(self):
   self.kembalian = self.bayar - self.totalBayar
@@ -86,6 +87,23 @@ def totalPembayaran(self):
       except ValueError :
         print ("Masukan jumlah dengan benar!")
         continue
-        
-      
+      total = self.cost(beli, banyak)
+      self.totalBayar += total
+      potongan = self.diskon(beli, banyak, self.cost(beli, 1))
+      self.totalBayar -= potongan
+
+print('Total Bayar :', self.totalBayar)
+self.bayar = int(input('Uang Bayar :'))
+self.hitungKembalian()
+
+lanjut = input('Lanjut belanja? (ya/tidak):')
+if lanjut.lower()!='ya':
+  print('Terimakasih sudah berbelanja!')
+  break
+
+Main
+__name__== "__main__":
+toko = TokoPakaian()
+toko.totalPembayaran()
+
 
