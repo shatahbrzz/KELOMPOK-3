@@ -32,4 +32,35 @@ class TokoPakaian:
     }
     for produk, harga in pakaian.items():
       print(f"{produk.capitalize()}: Rp {harga}")
-      
+
+  def diskon(self, produk, jumlah, harga):
+    potongan = 0
+    if produk.lower() == "celana" and jumlah >= 2:
+      potongan = 0.1 * harga * jumlah
+      if jumlah >= 4:
+        potongan = 0.2 * harga * jumlah
+    elif produk.lower() == "kemeja" and jumlah >= 3:
+      potongan = 0.2 * harga * jumlah
+      if jumlah >= 5:
+        potongan = 0.3 * harga * jumlah
+    elif produk.lower() == "jaket" and jumlah >= 2:
+      potongan = 0.15 * harga * jumlah
+      if jumlah >= 3:
+        potongan = 0.25 * harga * jumlah
+    elif produk.lower() == "hoodie" and jumlah >= 2:
+      potongan = 0.1 * harga * jumlah
+      if jumlah >= 4:
+        potongan = 0.2 * harga * jumlah
+    elif produk.lower() == "blazer" and jumlah >= 2
+      potongan = 0.1 * harga * jumlah
+      if jumlah >= 4:
+        potongan = 0.15 * harga * jumlah
+    elif produk.lower() == "gamis" and jumlah >= 2:
+      potongan = 0.1 * harga * jumlah
+      if jumlah >= 4:
+        potongan = 0.15 * harga * jumlah
+    elif produk.lower() == "dress" and jumlah >= 2:
+      potongan = 0.1 * harga * jumlah
+      if jumlah >= 4:
+        potongan = 0.2 * harga * jumlah
+    return potongan
